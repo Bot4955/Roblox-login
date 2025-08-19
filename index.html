@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - FutureSchools</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121215;
+      color: #f7f7f8;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #000;
+      padding: 10px 20px;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 35px;
+    }
+
+    .logo span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #f7f7f8;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-left: 30px;
+    }
+
+    .nav-left a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-left a:hover {
+      color: #f7f7f8;
+    }
+
+    /* Barra búsqueda */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: #1e1e1e;
+      padding: 6px 12px;
+      border-radius: 20px;
+      width: 250px;
+    }
+
+    .search-bar input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: #f7f7f8;
+      padding-left: 8px;
+      font-size: 14px;
+    }
+
+    .search-bar svg {
+      fill: #aaa;
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Botones */
+    .btn-register {
+      background: #00a2ff;
+      color: #f7f7f8;
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-register:hover {
+      background: #0088cc;
+    }
+
+    .btn-login {
+      background: transparent;
+      border: 1px solid #f7f7f8;
+      color: #f7f7f8;
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .btn-login:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Contenido central */
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Caja de login */
+    .login-container {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 10px;
+      width: 350px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #f7f7f8;
+    }
+
+    .login-container input {
+      width: calc(100% - 20px);
+      padding: 12px 10px;
+      margin: 10px auto;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background: #2a2a2a;
+      color: #f7f7f8;
+      font-size: 14px;
+      display: block;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      background: #00a2ff;
+      color: #f7f7f8;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-container button:hover {
+      background: #0088cc;
+    }
+
+    .extra-links {
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    .extra-links a {
+      color: #00a2ff;
+      text-decoration: none;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+
+    #msg {
+      margin-top: 10px;
+      font-size: 13px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="logo.png" alt="FutureSchools">
+      <span>FutureSchools</span>
+    </div>
+
+    <!-- ENLACES IZQUIERDA -->
+    <div class="nav-left">
+      <a href="#">Destacados</a>
+      <a href="#">Mercado</a>
+      <a href="#">Crear</a>
+      <a href="#">Moneda EZ</a>
+    </div>
+
+    <!-- BARRA DE BUSQUEDA -->
+    <div class="search-bar">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 
+        0016 9.5 6.5 6.5 0 109.5 16c1.61 0 
+        3.09-.59 4.23-1.57l.27.28v.79l5 
+        4.99L20.49 19l-4.99-5zm-6 
+        0C8.01 14 6 11.99 6 9.5S8.01 5 
+        10.5 5 15 7.01 15 9.5 12.99 
+        14 10.5 14z"/>
+      </svg>
+      <input type="text" placeholder="Buscar...">
+    </div>
+
+    <!-- BOTONES DERECHA -->
+    <div class="nav-right">
+      <a href="#" class="btn-register">Registro</a>
+      <a href="#" class="btn-login">Inicio sesión</a>
+    </div>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="main-content">
+    <!-- FORMULARIO LOGIN -->
+    <div class="login-container">
+      <h2>Inicia sesión</h2>
+      <input type="text" id="username" placeholder="Usuario">
+      <input type="password" id="password" placeholder="Contraseña">
+      <button onclick="login()">Entrar</button>
+      <p id="msg"></p>
+      <div class="extra-links">
+        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+        <p><a href="#">¿No tienes cuenta? Regístrate</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if(user === "jugador" && pass === "1234"){
+        document.getElementById("msg").style.color = "lightgreen";
+        document.getElementById("msg").innerText = "✅ Login correcto...";
+        setTimeout(() => {
+          window.location.href = "juego.html";
+        }, 1500);
+      } else {
+        document.getElementById("msg").style.color = "red";
+        document.getElementById("msg").innerText = "❌ Usuario o contraseña incorrectos";
+      }
+    }
+  </script>
+
+</body>
+</html>
